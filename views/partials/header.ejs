@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/sidebar.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="sidebar">
+    <h2><img src="/styles/images/image.png" alt="" height="50px" width="50px" class="logo1">
+   Thoughtly</h2>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+
+    <h2>Categories</h2>
+    <ul>
+        <% if (typeof posts !== "undefined" && posts.length > 0) { %>
+            <% posts.forEach(post => { %>
+                <li><a href="/post/<%= posts.indexOf(post) + 1 %>"><%= post.title %></a></li>
+            <% }); %>
+        <% } else { %>
+            <li>No categories available</li>
+        <% } %>
+    </ul>
+    
+    <h2>Recent Posts</h2>
+    <ul>
+        <% if (typeof blogs !== "undefined" && blogs.length > 0) { %>
+            <% blogs.slice(0, 5).forEach(blog => { %>
+                <li>
+                    <a href="/blogs"><%= blog.title %></a>
+                </li>
+            <% }); %>
+        <% } else { %>
+            <li  class="list">No recent posts available</li>
+        <% } %>
+    </ul>
+    
+
+    <h2>Follow Me</h2>
+    <ul class="social-links">
+        <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+        <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+        <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+    </ul>
+</div>
+
+
+
+</body>
+</html>

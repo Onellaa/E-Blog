@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+
+<%- include("./partials/header.ejs") %>
+<body>
+  <main>
+    <div class="container py-4">
+     
+  
+      <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+        <div class="container-fluid py-5">
+          
+          <h1 class="display-5 fw-bold">Discover Your Next Big Idea!</h1>
+          <p class="col-md-8 fs-4">Welcome to Thoughtly! Dive into a world of inspiration, creativity, and insights. Whether you're looking for expert tips, personal stories, or the latest trends, we've got something for everyone. Explore our articles, join the conversation, and let's make everyday moments extraordinary.</p>
+         
+        </div>
+      </div>
+  
+      <div class="row align-items-md-stretch">
+        <div class="col-md-6">
+          <div class="h-100 p-5 text-bg-dark rounded-3">
+            <h2>Live Better, Every Day!</h2>
+            <p>Explore stories, tips, and trends that inspire a happier, healthier life. Dive into topics that matter and make every day extraordinary</p>
+            <button  onclick="window.location.href='/post/3'" class="btn btn-outline-light" type="button">Explore Articles</button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="h-100 p-5 bg-body-tertiary border rounded-3">
+            <h2>Unlock Your Potential!</h2>
+            <p>Explore tools, tips, and inspiration for personal development. Start your journey to a more fulfilled life today.</p>
+            <button  onclick="window.location.href='/post/2'" class="btn btn-outline-secondary" type="button">Explore Articles</button>
+          </div>
+        </div>
+      </div>
+  
+      <footer class="pt-3 mt-4 text-body-secondary border-top">
+        © 2024
+      </footer>
+    </div>
+  </main>
+</body>
+</html>
