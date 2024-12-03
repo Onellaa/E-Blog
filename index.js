@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 let blogs = [];
 
-app.get("/E-Blog", (req, res) => {
+app.get("/E-Blog/", (req, res) => {
   // res.render("index.ejs");
   const posts = [
     {
